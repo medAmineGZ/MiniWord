@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+
+
+    <p id="text2">FORZA INTER &#10084 &#10084 &#10084.</p>
+    <input type="number" onchange="changeTextSize()" value="20" id="input">
+ 
+ <input name="MyColorPicker" 
+        type="color"
+        id="ColorPicker1" 
+        onchange="changeColor()"/>
+
+
+        <select id="font" onchange="changefont()">
+            <option value="arial">arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Garamond">Garamond</option>
+    
+        </select>
+      <script>
+    function changeTextSize() {
+  var input = document.getElementById('input').value;
+  
+  document.getElementById('text2').style.fontSize = input + "px";
+}
+
+function changefont() {
+            document.getElementById("text2").style.fontFamily =
+                document.getElementById("font").value;
+        }
+
+        function changeColor() {
+            document.getElementById("text2").style.color =
+                document.getElementById("ColorPicker1").value;
+        }
+    </script>
+
+  </body>
+</html>
